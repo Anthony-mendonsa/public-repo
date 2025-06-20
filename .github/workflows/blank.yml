@@ -16,11 +16,11 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.anthony8800 }}
-          password: ${{ secrets.ANTHONY_PASSWORD }}
+          username: "anthony8800"         # 👈 Your DockerHub username
+          password: "ANTHONY_PASSWORD"    # 👈 Your DockerHub password
 
       - name: Build Docker image
-        run: docker build -t yourdockerhubusername/my-python-app:latest .
+        run: docker build -t anthony8800/my-python-app:latest .
 
       - name: Push Docker image to DockerHub
-        run: docker push yourdockerhubusername/my-python-app:latest
+        run: docker push anthony8800/my-python-app:latest
